@@ -1,6 +1,6 @@
 # Ordinal Date to Gregorian Date
 
-from ex91 import days_in_month, ordinal_date, isLeapYear
+from ex91 import days_in_month, ordinal_date, is_leap_year
 
 
 # this function will compute the month from an ordinal date
@@ -50,10 +50,10 @@ def date_sum_days():
     ordinal_days_sum = ordinal_days + days_sum
 
     # converting the ordinal date to gregorian date, considering leap years
-    if isLeapYear(year_in) and ordinal_days_sum > 366:
+    if is_leap_year(year_in) and ordinal_days_sum > 366:
         day_out, month_out = ordinal_to_gregorian(ordinal_days_sum - 366, year_in + 1)
         year_out = year_in + 1
-    elif not isLeapYear(year_in) and ordinal_days_sum > 365:
+    elif not is_leap_year(year_in) and ordinal_days_sum > 365:
         day_out, month_out = ordinal_to_gregorian(ordinal_days_sum-365, year_in+1)
         year_out = year_in + 1
     else:

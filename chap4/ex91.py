@@ -1,7 +1,7 @@
 # Gregorian Date to Ordinal Date
 
 
-def isLeapYear(year):
+def is_leap_year(year):
     if year % 400 == 0:
         return True
     elif year % 100 == 0:
@@ -17,7 +17,7 @@ def days_in_month(month, year):
     if month == 4 or month == 6 or month == 9 or month == 11:
         return 30
     elif month == 2:
-        if isLeapYear(year):
+        if is_leap_year(year):
             return 29
         else:
             return 28
